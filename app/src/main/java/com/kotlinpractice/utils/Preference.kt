@@ -19,7 +19,7 @@ class Preference<T>(val name:String,private val default:T) {
     }
 
     operator fun getValue(thisRef:Any? ,property:KProperty<*>):T{
-        getSharedPreferences(name,default)
+        return getSharedPreferences(name,default)
     }
 
     operator fun setValue(thisRef: Any?,property: KProperty<*>,value:T){
